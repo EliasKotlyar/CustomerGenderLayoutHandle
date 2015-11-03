@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Twinsen_CustomerGenderLayoutHandle>
+            <version>1.0.0</version>
+        </Twinsen_CustomerGenderLayoutHandle>
+    </modules>
+    <global>
+        <models>
+            <twinsen_customergenderlayouthandle>
+                <class>Twinsen_CustomerGenderLayoutHandle_Model</class>
+            </twinsen_customergenderlayouthandle>
+        </models>
+        <helpers>
+            <twinsen_customergenderlayouthandle>
+                <class>Twinsen_CustomerGenderLayoutHandle_Helper</class>
+            </twinsen_customergenderlayouthandle>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <twinsen_customergenderlayouthandle_observer>
+                        <class>twinsen_customergenderlayouthandle/observer</class>
+                        <method>beforeLoadLayout</method>
+                    </twinsen_customergenderlayouthandle_observer>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+    </frontend>
+</config>
